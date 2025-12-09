@@ -76,7 +76,6 @@ header {
     width: 35px;
 }
 
-/* Floating Icons */
 .social-floating {
     position: fixed;
     top: 50%;
@@ -121,7 +120,7 @@ header {
     position: absolute;
     bottom: 0; left: 0;
     width: 100%;
-    height: 40%; /* adjust how tall the gradient is */
+    height: 40%; 
     background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
     pointer-events: none;
     z-index: 0;
@@ -149,19 +148,17 @@ header {
     opacity: 0.9;
 }
 
-/* --- MAGNETIC BUTTON --- */
 :root {
     --tx: 0px;
     --ty: 0px;
 }
 
-/* Magnetic Button Container */
+
 .magnetic {
     position: relative;
     display: inline-block;
 }
 
-/* Button */
 .mag-btn {
     position: relative;
     background: none;
@@ -173,7 +170,6 @@ header {
     justify-content: center;
 }
 
-/* Text (STAYS STILL ALWAYS) */
 .mag-btn .text {
     position: relative;
     z-index: 3;
@@ -184,7 +180,6 @@ header {
     pointer-events: auto;
 }
 
-/* The FOLLOWING CIRCLE */
 .mag-btn .shape {
     --w: 80px;
     --h: 80px;
@@ -211,20 +206,15 @@ header {
     pointer-events: none;
 }
 
-/* When hovering the TEXT ONLY — turn into wide button shape */
 .mag-btn.active .shape {
     width: 220px;
     height: 64px;
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(6px);
-
-    /* Lock to center */
     transform: translate(-50%, -50%);
 }
 
-
-/* ✅ IMAGE ON THE RIGHT SIDE */
 .hero-image-wrapper {
     margin-top: 50px;
     width: 520px;
@@ -237,7 +227,6 @@ header {
     animation: fade 1s ease-in-out;
 }
 
-/* ✅ Smooth Fade Animation */
 @keyframes fade {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -248,7 +237,7 @@ header {
     height: 90vh;
     position: relative;
     overflow: hidden;
-    background: none; /* no background */
+    background: none; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -281,7 +270,7 @@ header {
     overflow: hidden;
     z-index: 1;
     text-align: center;
-    color: white; /* you can change this */
+    color: white;
 }
 
 .middle-content h2 {
@@ -297,11 +286,11 @@ header {
     white-space: nowrap;
     border-right: 3px solid rgb(255, 255, 255);
     color: rgb(255, 255, 255);
-    padding-right: 3px; /* keeps cursor from shifting the block */
+    padding-right: 3px; 
 }
 
 .about-me {
-    margin-top: -60px;  /* pulls it closer to the typing text */
+    margin-top: -60px;  
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -312,7 +301,7 @@ header {
     color: #ffffffcc;
     font-size: 18px;
     line-height: 1.7;
-    margin: 6px 0;        /* perfect spacing */
+    margin: 6px 0;     
 }
 
 .fade-up {
@@ -342,9 +331,7 @@ header {
     50% { border-color: transparent; }
 }
 
-/* ───────────────────────────────
-   SKILLS SECTION
-──────────────────────────────── */
+
 .skills-section {
     width: 100%;
     padding: 120px 0;
@@ -381,14 +368,12 @@ header {
     margin: 60px 0 10px;
 }
 
-/* Loop Containers */
 
 
-/* Track that moves */
 .loop-container {
     width: 100%;
-    overflow-x: auto;        /* horizontal scrolling */
-    overflow-y: hidden;      /* hide vertical scroll */
+    overflow-x: auto;       
+    overflow-y: hidden;  
     position: relative;
     margin-bottom: 40px;
     padding: 20px 0;
@@ -397,48 +382,42 @@ header {
     -webkit-overflow-scrolling: touch;
 }
 
-/* Dragging cursor */
 .loop-container.dragging {
     cursor: grabbing;
     cursor: -webkit-grabbing;
 }
 
-/* The track that holds the cards */
+
 .loop-track {
     display: flex;
     gap: 30px;
-    width: max-content;      /* ensures overflow */
+    width: max-content;      
     padding: 0 ;
     white-space: nowrap;
 }
 
-/* ──────────────────────────────
-   SCROLLBAR STYLES
-──────────────────────────────── */
-
 /* Chrome, Edge, Safari */
 .loop-container::-webkit-scrollbar {
     height: 8px;     
-    display: block;         /* thickness */
+    display: block;         
 }
 .loop-container::-webkit-scrollbar-track {
-    background: transparent; /* auto-hide effect */
+    background: transparent; 
 }
 .loop-container::-webkit-scrollbar-thumb {
-    background: #F3E5AB; /* thumb color */
+    background: #F3E5AB; 
     border-radius: 4px;
 }
 .loop-container::-webkit-scrollbar-thumb:hover {
     background: #F3E5AB;
 }
 
-/* Firefox */
+
 .loop-container {
     scrollbar-width: thin;
     scrollbar-color: #F3E5AB transparent;
 }
 
-/* CARDS */
 .card {
     min-width: 280px;
     min-height: 100px;
@@ -476,11 +455,6 @@ header {
     font-size: 1rem;
 }
 
-/* Projects Section */
-/* ──────────────────────────────
-   PROJECTS SECTION
-──────────────────────────────── */
-
 .projects-section {
   width: 100%;
   position: relative;
@@ -492,9 +466,9 @@ header {
 
 .projects-container {
   display: flex;
-  flex-direction: column; /* stack multiple project wrappers vertically */
+  flex-direction: column; 
   align-items: center;
-  gap: 80px; /* space between each project */
+  gap: 80px; 
 }
 
 .small-heading {
@@ -513,18 +487,17 @@ header {
   position: relative;
   display: flex;
   align-items: center;
-  gap: 50px; /* gap between side cards and center card */
+  gap: 50px; 
 }
 
 .description-label {
     font-size: 2rem;
     font-weight: 700;
-    color: #F3E5AB; /* or whatever color you like */
-    margin-bottom: 15px; /* space between label and paragraph */
+    color: #F3E5AB; 
+    margin-bottom: 15px; 
     letter-spacing: 1px;
 }
 
-/* Side cards hidden initially */
 .side-card {
   width: 400px;
   padding: 30px;
@@ -535,10 +508,9 @@ header {
   transform: scale(0.8);
   transition: all 0.5s ease;
   pointer-events: none;
-  text-align: justify; /* align text to the left */
+  text-align: justify; 
 }
 
-/* Center Card */
 .project-card {
   position: relative;
   width: 350px;
@@ -576,41 +548,34 @@ header {
 
 /* Contacts */
 
-/* =============================
-   CAFE THEME CONTACT SECTION
-============================= */
-
 .contact-section {
     position: relative;  
     width: 100%;
     min-height: 100vh;
     padding: 60px 20px;
-    background: #ac9b58; /* Your café color */
+    background: #ac9b58; 
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
-/* BLACK FADE OVERLAY */
 .contact-section::before {
     content: '';
     position: absolute;
     top: 0; left: 0;
     width: 100%;
-    height: 35%;   /* Controls how long the black fade is */
+    height: 35%;   
     background: linear-gradient(to bottom,rgba(0,0,0,0.999),rgba(0,0,0,0));
     z-index: 0;
 }
 
-/* KEEP CONTENT ABOVE THE OVERLAY */
 .contact-container {
     position: relative;
     z-index: 2;
 }
 
 
-/* Header */
 .contact-header {
     text-align: center;
     margin-bottom: 90px;
@@ -630,7 +595,6 @@ header {
     opacity: 0.85;
 }
 
-/* Card Layout */
 .contact-card {
     background: #1a1a1a; 
     color: white;
@@ -643,7 +607,6 @@ header {
     box-shadow: 0 20px 50px rgba(0,0,0,0.4);
 }
 
-/* LEFT SIDE */
 .contact-left {
     display: flex;
     flex-direction: column;
@@ -676,7 +639,6 @@ header {
 }
 
 
-/* RIGHT SIDE FORM */
 .contact-form {
     background: #111;
     padding: 35px;
@@ -739,8 +701,8 @@ header {
 .footer-section {
     width: 100%;
     padding: 50px 20px 20px 20px;
-    background: #1a1a1a; /* same as contact card for smooth transition */
-    color: #F3E5AB; /* café accent color */
+    background: #1a1a1a; 
+    color: #F3E5AB; 
     text-align: center;
     position: relative;
     z-index: 2;
@@ -804,13 +766,13 @@ header {
 }
 
 .footer-socials a:hover img {
-    filter: invert(0); /* keeps the icon dark so it shows on yellow background */
+    filter: invert(0);
 }
 
 .footer-left,
 .footer-right {
-    flex: 1; /* allows both sides to take equal width */
-    min-width: 550px; /* prevents shrinking too much on smaller screens */
+    flex: 1; 
+    min-width: 550px; 
 }
 
 .footer-copy {
