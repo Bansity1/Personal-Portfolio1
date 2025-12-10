@@ -571,6 +571,7 @@ header {
 }
 
 .contact-container {
+    width: 70%;
     position: relative;
     z-index: 2;
 }
@@ -781,6 +782,86 @@ header {
     margin-top: 20px;
 }
 
+@media (max-width: 1500px) {
+  .side-card {
+    width: 330px;
+  }
+
+  .project-card {
+    width: 320px;
+    height: 460px;
+  }
+
+  .project-wrapper {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 1200px) {
+    .contact-container {
+        width: 85%;
+    }
+
+    .contact-card {
+        gap: 80px;
+        padding: 50px;
+    }
+}
+
+@media (max-width: 1128px) {
+
+.project-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* centers all children */
+      justify-content: center; /* ensures vertical centering */
+      gap: 30px;
+      text-align: center; /* center text inside wrapper */
+      width: 100%; /* full width for proper centering */
+  }
+
+  .side-card {
+      width: 90%;
+      max-width: 400px;
+      margin: 0 auto;      /* center the cards */
+      text-align: center;  /* center text */
+      float: none;         /* remove any float */
+      position: static;    /* override positioning */
+  }
+
+  .project-card {
+      width: 80%;
+      max-width: 350px;
+      height: auto;
+      margin: 0 auto;      /* center the project card */
+
+  }
+
+  .project-card img {
+      width: 100%;
+      height: auto;
+  }
+
+
+    .footer-container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-left h3,
+    .footer-left p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+}
 
 /* Responsive */
 @media screen and (max-width: 900px){
@@ -834,6 +915,60 @@ header {
         display: none;
     }
 
+    .hero {
+        flex-direction: column;       /* stack text + image */
+        justify-content: center;
+        padding: 80px 30px 40px 30px; /* reduce heavy padding */
+        height: auto;                 /* allow natural height */
+        text-align: center;
+        gap: 10px;                    /* spacing between text & image */
+    }
+
+    .hero-content {
+        max-width: 100%;              /* remove the 50% restriction */
+    }
+
+    .hero-content h1 {
+        font-size: 2.4rem;   
+        margin-top: 100px;         /* more mobile-friendly */
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+        margin-top: 5px;
+    }
+
+    .magnetic {
+        display: flex;
+        justify-content: center;      /* center resume button */
+    }
+
+    .mag-btn .text {
+        font-size: 1.2rem;
+        padding: 28px 42px;           /* smaller but still premium */
+    }
+
+    .mag-btn .shape {
+        --w: 70px;
+        --h: 70px;
+    }
+
+    .mag-btn.active .shape {
+        width: 180px;                 /* adapt to smaller size */
+        height: 56px;
+    }
+
+    .hero-image-wrapper {
+        width: 70%;                   /* shrink image on tablet/large mobile */
+        max-width: 420px;
+        margin-top: 0;
+        justify-content: center;
+    }
+
+    .hero-image-wrapper img {
+        width: 100%;
+    }
+
 .cta-btn {
     margin-top: 18px;
     padding: 10px 22px;
@@ -854,26 +989,233 @@ header {
     gap: 30px;
   }
 
+ .project-card {
+    width: 90%;
+    max-width: 350px;
+    height: 450px;
+  }
+
   .side-card {
     width: 90%;
-    text-align: center;
   }
 
-  .project-card {
-    width: 90%;
-    height: 400px;
+
+  .contact-section {
+        display: block;   /* remove flex centering */
+        padding: 40px 40px;
+    }
     
-  }
-
-.contact-card {
-        grid-template-columns: 1fr;
+.contact-container {
+        width: 90%;
+        
     }
 
-.footer-left h3 {
-    text-align: center;
+    .contact-header {
+        margin-bottom: 60px;
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+        margin-top: 50px;
+    }
+
+    .contact-subtext {
+        font-size: 1rem;
+    }
+
+    /* STACK THE 2 COLUMNS INTO 1 */
+    .contact-card {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding: 40px;
+        margin-top: -20px;
+    }
+
+    /* LEFT SIDE */
+    .contact-left {
+        gap: 12px;
+    }
+
+    .contact-item a,
+    .contact-item p {
+        font-size: 1.05rem;
+    }
+
+    .contact-left iframe {
+        width: 100%;
+        height: 260px;
+        border-radius: 12px;
+    }
+
+    /* FORM SIDE */
+    .contact-form {
+        padding: 28px;
+        border-radius: 18px;
+    }
+
+    .form-title {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 0.95rem;
+        padding: 8px 5px;
+    }
+
+    .send-btn {
+        padding: 12px;
+        font-size: 1rem;
+        border-radius: 12px;
+    }
+.footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .footer-left,
+    .footer-right {
+        min-width: 100%;   /* allow full-width stacking */
+        flex: unset;       /* removes forced stretching */
+    }
+
+    .footer-left h3,
+    .footer-left p {
+        text-align: center;
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-socials a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-section {
+        padding: 40px 20px 20px 20px;
+    }
+
+}
+@media (max-width: 768px) {
+    .contact-container {
+        width: 90%;
+    }
+
+    .contact-card {
+        padding: 35px;
+        gap: 45px;
+    }
+
+    .contact-left iframe {
+        height: 250px;
+    }
+
+    .contact-title {
+        font-size: 2.2rem;
+    }
+
+    .form-title {
+        font-size: 1.4rem;
+    }
+
+    .send-btn {
+        padding: 12px;
+        font-size: 1rem;
+    }
 }
 
-.footer-left p {
-    text-align: center;
+@media (max-width: 576px) {
+    .contact-section {
+        padding: 40px 25px;
+    }
+
+    .contact-title {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        padding: 28px;
+        gap: 35px;
+        border-radius: 18px;
+    }
+
+    .contact-left {
+        gap: 10px;
+    }
+
+    .contact-item a,
+    .contact-item p {
+        font-size: 1rem;
+    }
+
+    iframe {
+        height: 220px !important;
+    }
+
+    .contact-form {
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .input-group input,
+    .input-group textarea {
+        font-size: 0.95rem;
+        padding: 8px 4px;
+    }
+
+     .footer-container {
+        gap: 20px;
+        padding: 0 70px;
+    }
+
+    .footer-left h3 {
+        font-size: 1.5rem;
+    }
+
+    .footer-left p {
+        font-size: 0.95rem;
+        line-height: 1.4;
+        max-width: 93%;         /* ensures no overflow */
+        word-wrap: break-word;   /* forces long words to wrap */
+        white-space: normal;     /* prevents staying in one line */
+        text-align: center;      /* prevents left-side overflow */
+    }
+
+    .footer-right h4 {
+        font-size: 1.1rem;
+    }
+
+    .footer-socials a img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .footer-copy {
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
 }
+
+
+@media (max-width: 420px) {
+    .contact-section {
+        padding: 10px 20px;
+    }
+    .contact-title {
+        font-size: 1.8rem;
+    }
+
+    .contact-card {
+        padding: 20px;
+    }
+
+    .send-btn {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
 }
+
