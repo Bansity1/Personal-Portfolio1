@@ -26,7 +26,6 @@ body::-webkit-scrollbar {
 header {
     height: 100vh;
     width: 100vw;
-
     background-size: cover;
 }
 
@@ -153,7 +152,6 @@ header {
     --ty: 0px;
 }
 
-
 .magnetic {
     position: relative;
     display: inline-block;
@@ -196,12 +194,11 @@ header {
 
     transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty)));
     transition: 
-        transform 120ms cubic-bezier(.2,.9,.2,1),
-        width 360ms ease,
-        height 360ms ease,
-        border-radius 360ms ease,
-        background 360ms ease;
-
+    transform 120ms cubic-bezier(.2,.9,.2,1),
+    width 360ms ease,
+    height 360ms ease,
+    border-radius 360ms ease,
+    background 360ms ease;
     z-index: 1;
     pointer-events: none;
 }
@@ -782,6 +779,7 @@ header {
     margin-top: 20px;
 }
 
+/* Responsive */
 @media (max-width: 1500px) {
   .side-card {
     width: 330px;
@@ -813,27 +811,27 @@ header {
 .project-wrapper {
       display: flex;
       flex-direction: column;
-      align-items: center; /* centers all children */
-      justify-content: center; /* ensures vertical centering */
+      align-items: center; 
+      justify-content: center; 
       gap: 30px;
-      text-align: center; /* center text inside wrapper */
-      width: 100%; /* full width for proper centering */
+      text-align: center; 
+      width: 100%; 
   }
 
   .side-card {
       width: 90%;
       max-width: 400px;
-      margin: 0 auto;      /* center the cards */
-      text-align: center;  /* center text */
-      float: none;         /* remove any float */
-      position: static;    /* override positioning */
+      margin: 0 auto;     
+      text-align: center; 
+      float: none;         
+      position: static;    
   }
 
   .project-card {
       width: 80%;
       max-width: 350px;
       height: auto;
-      margin: 0 auto;      /* center the project card */
+      margin: 0 auto;
 
   }
 
@@ -863,7 +861,6 @@ header {
 
 }
 
-/* Responsive */
 @media screen and (max-width: 900px){
     .navbar {
         padding: 0;
@@ -911,26 +908,26 @@ header {
 
 }
 
-.social-floating {
+    .social-floating {
         display: none;
     }
 
     .hero {
-        flex-direction: column;       /* stack text + image */
+        flex-direction: column;       
         justify-content: center;
-        padding: 80px 30px 40px 30px; /* reduce heavy padding */
-        height: auto;                 /* allow natural height */
+        padding: 80px 30px 40px 30px; 
+        height: auto;                 
         text-align: center;
-        gap: 10px;                    /* spacing between text & image */
+        gap: 10px;                    
     }
 
     .hero-content {
-        max-width: 100%;              /* remove the 50% restriction */
+        max-width: 100%;             
     }
 
     .hero-content h1 {
         font-size: 2.4rem;   
-        margin-top: 100px;         /* more mobile-friendly */
+        margin-top: 100px;        
     }
 
     .hero-content p {
@@ -940,12 +937,12 @@ header {
 
     .magnetic {
         display: flex;
-        justify-content: center;      /* center resume button */
+        justify-content: center;    
     }
 
     .mag-btn .text {
         font-size: 1.2rem;
-        padding: 28px 42px;           /* smaller but still premium */
+        padding: 28px 42px;          
     }
 
     .mag-btn .shape {
@@ -954,12 +951,12 @@ header {
     }
 
     .mag-btn.active .shape {
-        width: 180px;                 /* adapt to smaller size */
+        width: 180px;               
         height: 56px;
     }
 
     .hero-image-wrapper {
-        width: 70%;                   /* shrink image on tablet/large mobile */
+        width: 70%;                   
         max-width: 420px;
         margin-top: 0;
         justify-content: center;
@@ -969,14 +966,14 @@ header {
         width: 100%;
     }
 
-.cta-btn {
+    .cta-btn {
     margin-top: 18px;
     padding: 10px 22px;
     font-size: 1rem;
     border-radius: 12px;
   }
 
-.card {
+    .card {
         min-width: 140px;
         padding: 15px;
     }
@@ -984,30 +981,28 @@ header {
         font-size: 2.2rem;
     }
 
-  .project-wrapper {
+    .project-wrapper {
     flex-direction: column;
     gap: 30px;
   }
 
- .project-card {
+    .project-card {
     width: 90%;
     max-width: 350px;
     height: 450px;
   }
 
-  .side-card {
+    .side-card {
     width: 90%;
   }
 
-
-  .contact-section {
-        display: block;   /* remove flex centering */
+    .contact-section {
+        display: block;  
         padding: 40px 40px;
     }
     
-.contact-container {
-        width: 90%;
-        
+    .contact-container {
+        width: 90%; 
     }
 
     .contact-header {
@@ -1023,7 +1018,6 @@ header {
         font-size: 1rem;
     }
 
-    /* STACK THE 2 COLUMNS INTO 1 */
     .contact-card {
         grid-template-columns: 1fr;
         gap: 50px;
@@ -1031,7 +1025,6 @@ header {
         margin-top: -20px;
     }
 
-    /* LEFT SIDE */
     .contact-left {
         gap: 12px;
     }
@@ -1047,7 +1040,6 @@ header {
         border-radius: 12px;
     }
 
-    /* FORM SIDE */
     .contact-form {
         padding: 28px;
         border-radius: 18px;
@@ -1077,8 +1069,8 @@ header {
 
     .footer-left,
     .footer-right {
-        min-width: 100%;   /* allow full-width stacking */
-        flex: unset;       /* removes forced stretching */
+        min-width: 100%;  
+        flex: unset;       
     }
 
     .footer-left h3,
@@ -1179,10 +1171,10 @@ header {
     .footer-left p {
         font-size: 0.95rem;
         line-height: 1.4;
-        max-width: 93%;         /* ensures no overflow */
-        word-wrap: break-word;   /* forces long words to wrap */
-        white-space: normal;     /* prevents staying in one line */
-        text-align: center;      /* prevents left-side overflow */
+        max-width: 93%;         
+        word-wrap: break-word;   
+        white-space: normal;   
+        text-align: center;     
     }
 
     .footer-right h4 {
